@@ -320,5 +320,13 @@ dotnet build
 
 <img width="1855" height="960" alt="image" src="https://github.com/user-attachments/assets/64b2b7ef-2ccc-4148-88e1-9590c464a472" />
 
+<img width="1855" height="960" alt="Captura desde 2025-10-14 20-45-28" src="https://github.com/user-attachments/assets/342bed70-9723-496c-a4fc-94eece027a39" />
 
+<img width="1855" height="960" alt="Captura desde 2025-10-14 20-46-39" src="https://github.com/user-attachments/assets/ece296fe-c2da-4818-8e75-eb26663f919f" />
+
+<img width="1855" height="960" alt="Captura desde 2025-10-14 20-47-38" src="https://github.com/user-attachments/assets/2b2b2924-a837-4afc-9316-b8c174ee27c4" />
+
+<img width="1855" height="960" alt="Captura desde 2025-10-14 20-48-22" src="https://github.com/user-attachments/assets/378f5313-6733-4c02-94e5-73f9573693b3" />
+
+<img width="1609" height="882" alt="Captura desde 2025-10-14 20-49-33" src="https://github.com/user-attachments/assets/19a79abb-8126-4f00-8115-e6bbe68fa2dc" />
 
