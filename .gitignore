@@ -1,0 +1,67 @@
+## === .NET / ASP.NET MVC ===
+
+# Compilación y dependencias
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Configuración local
+.vs/
+.idea/
+*.vcxproj.user
+*.rsuser
+
+# Archivos de entorno
+.env
+.env.local
+.env.development
+.env.production
+
+# Archivos generados por usuario
+*.swp
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Archivos de publicación
+publish/
+out/
+artifacts/
+*.publish.xml
+
+# Archivos de paquetes y dependencias
+packages/
+*.nupkg
+*.snupkg
+*.nuspec
+*.dll
+*.exe
+*.pdb
+
+# Archivos de migración automáticos (opcional)
+[Mm]igrations/
+
+# Configuración de Rider o VS Code
+.idea/
+.vscode/
+*.code-workspace
+
+# Archivos de cobertura o análisis
+coverage/
+TestResults/
+*.c*
