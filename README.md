@@ -40,11 +40,11 @@ A comprehensive web application for managing patients, doctors, and medical appo
 ### Required Software
 - **.NET 8.0 SDK** or later
 - **MySQL Server** 8.0 or later
-- **Git** for version control
+
 
 ### Recommended Development Tools
-- **Visual Studio Code** or **Visual Studio 2022**
-- **MySQL Workbench** or similar database tool
+- **JetBrains Raider**
+- **MySQL Workbench** or **DBeaver**
 
 ## 📥 Installation
 
