@@ -49,14 +49,15 @@ A comprehensive web application for managing patients, doctors, and medical appo
 ## 📥 Installation
 
 ### 1. Clone the Repository
-git clone https://github.com/your-username/hospital-management-system.git
-cd hospital-management-system
+git clone https://github.com/JARV005/PruebaDesempe-oC-.git
+cd PruebaDesempeñoC#
 ### 2. Restore Dependencies
 dotnet restore
 ### 3. Install Required Packages
 # Entity Framework with MySQL
 dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.0
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 8.0.0
 
 # Email System
 dotnet add package MailKit
@@ -70,10 +71,10 @@ Update appsettings.json with your MySQL credentials:
 
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;Database=HospitalDB;Uid=your_username;Pwd=your_password;Charset=utf8mb4;"
+    "DefaultConnection": "Server=localhost;Port=3306;Database=HospitalDB;Uid=your_username;Pwd=your_password;"
   }
 }
-2. Email Configuration (Optional but Recommended)
+2. Email Configuration 
 Add email settings to appsettings.json:
 
 {
@@ -131,45 +132,40 @@ Appointments
 EmailHistories
 
 🚀 Running the Application
-Development Mode (Recommended)
+
 ```bash
 dotnet watch run
 ```
-Application will be available at: https://localhost:7000 or http://localhost:5000
+Application will be available at: https://localhost:5235 or http://localhost:7283
 
-Hot reload enabled for development
-
-Production Mode
-bash
-dotnet run
 # 💻 Usage
 Getting Started
-Access the Application: Open your browser and go to https://localhost:7000
+Access the Application: Open your browser and go to https://localhost:5235
 
 Navigate the System: Use the top navigation menu to access different modules
 
 Managing Patients
-Click "Patients" in the navigation menu
+Click "Pacientes" in the navigation menu
 
-Click "Register New Patient" to add a patient
+Click "Registrar nuevo paciente" to add a patient
 
 Fill in the required information (Name, Identification, Birth Date, Address, Phone, Email)
 
 Save the patient - the system will prevent duplicate identifications
 
 Managing Doctors
-Click "Doctors" in the navigation menu
+Click "Medicos" in the navigation menu
 
-Click "Register New Doctor" to add a doctor
+Click "Registar nuevo medico" to add a doctor
 
 Fill in the required information including working hours and days
 
 Save the doctor - the system will prevent duplicate license numbers
 
 Scheduling Appointments
-Click "Appointments" in the navigation menu
+Click "Citas" in the navigation menu
 
-Click "Schedule New Appointment"
+Click "Programar cita medica"
 
 Select a patient and doctor
 
