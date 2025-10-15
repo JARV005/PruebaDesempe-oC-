@@ -1,13 +1,13 @@
 # 🏥 Hospital Management System
 
+A comprehensive web application for managing patients, doctors, and medical appointments in a hospital environment. Built with ASP.NET Core MVC, Entity Framework, and MySQL.
+
 # By: 
 - Johan Alexander Rivera Vasquez
 - C#
 - johanalexanderriveravasquez@gmail.com
 - 1025644849
   
-
-A comprehensive web application for managing patients, doctors, and medical appointments in a hospital environment. Built with ASP.NET Core MVC, Entity Framework, and MySQL.
 
 ## 📋 Table of Contents
 - [Features](#features)
