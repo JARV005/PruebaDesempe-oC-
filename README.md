@@ -1,80 +1,59 @@
-🏥 Hospital Management System
+# 🏥 Hospital Management System
+
 A comprehensive web application for managing patients, doctors, and medical appointments in a hospital environment. Built with ASP.NET Core MVC, Entity Framework, and MySQL.
 
-📋 Table of Contents
-Features
+## 📋 Table of Contents
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Database Setup](#database-setup)
+- [Running the Application](#running-the-application)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [API Endpoints](#api-endpoints)
+- [Troubleshooting](#troubleshooting)
 
-Prerequisites
+## ✨ Features
 
-Installation
+### Core Modules
+- **Patients Management**: Complete CRUD operations with unique identification
+- **Doctors Management**: Complete CRUD operations with unique license numbers
+- **Appointments Management**: Schedule, confirm, and track medical appointments
 
-Configuration
+### Advanced Features
+- **Appointment Status System**: Programmed → Confirmed → Attended/Cancelled
+- **Working Hours Validation**: Prevents scheduling outside doctor's working hours
+- **Email Notifications**: Automatic confirmation emails with professional HTML templates
+- **Specialized Filters**: Filter doctors by specialty, view appointments by patient/doctor
+- **Unique Constraints**: Prevents duplicate patients/doctors
+- **Professional UI**: Bootstrap 5 responsive design
 
-Database Setup
+### Email System
+- Automatic appointment confirmation emails
+- Complete email history with status tracking
+- Professional HTML email templates
+- Robust error handling
 
-Running the Application
+## 🛠 Prerequisites
 
-Usage
+### Required Software
+- **.NET 8.0 SDK** or later
+- **MySQL Server** 8.0 or later
+- **Git** for version control
 
-Project Structure
+### Recommended Development Tools
+- **Visual Studio Code** or **Visual Studio 2022**
+- **MySQL Workbench** or similar database tool
 
-API Endpoints
+## 📥 Installation
 
-Troubleshooting
-
-✨ Features
-Core Modules
-Patients Management: Complete CRUD operations with unique identification
-
-Doctors Management: Complete CRUD operations with unique license numbers
-
-Appointments Management: Schedule, confirm, and track medical appointments
-
-Advanced Features
-Appointment Status System: Programmed → Confirmed → Attended/Cancelled
-
-Working Hours Validation: Prevents scheduling outside doctor's working hours
-
-Email Notifications: Automatic confirmation emails with professional HTML templates
-
-Specialized Filters: Filter doctors by specialty, view appointments by patient/doctor
-
-Unique Constraints: Prevents duplicate patients/doctors
-
-Professional UI: Bootstrap 5 responsive design
-
-Email System
-Automatic appointment confirmation emails
-
-Complete email history with status tracking
-
-Professional HTML email templates
-
-Robust error handling
-
-🛠 Prerequisites
-Required Software
-.NET 8.0 SDK or later
-
-MySQL Server 8.0 or later
-
-Git for version control
-
-Recommended Development Tools
-Visual Studio Code or Visual Studio 2022
-
-MySQL Workbench or similar database tool
-
-📥 Installation
-1. Clone the Repository
-bash
+### 1. Clone the Repository
 git clone https://github.com/your-username/hospital-management-system.git
 cd hospital-management-system
-2. Restore Dependencies
-bash
+### 2. Restore Dependencies
 dotnet restore
-3. Install Required Packages
-bash
+### 3. Install Required Packages
 # Entity Framework with MySQL
 dotnet add package Pomelo.EntityFrameworkCore.MySql --version 8.0.0
 dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.0
@@ -82,11 +61,13 @@ dotnet add package Microsoft.EntityFrameworkCore.Design --version 8.0.0
 # Email System
 dotnet add package MailKit
 dotnet add package MimeKit
-⚙️ Configuration
+
+
+### ⚙️ Configuration
 1. Database Connection
 Update appsettings.json with your MySQL credentials:
 
-json
+
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Port=3306;Database=HospitalDB;Uid=your_username;Pwd=your_password;Charset=utf8mb4;"
@@ -95,7 +76,6 @@ json
 2. Email Configuration (Optional but Recommended)
 Add email settings to appsettings.json:
 
-json
 {
   "EmailSettings": {
     "SmtpServer": "smtp.gmail.com",
@@ -121,12 +101,12 @@ Copy the 16-character generated password
 
 Use this app password in the configuration
 
-🗄 Database Setup
+# 🗄 Database Setup
 1. Create Database Manually
 sql
 CREATE DATABASE HospitalDB;
 2. Apply Migrations
-bash
+```bash
 # Create initial migration
 dotnet ef migrations add InitialCreate
 
@@ -137,6 +117,8 @@ dotnet ef database update
 dotnet ef migrations Add AppointmentStatus
 dotnet ef migrations Add EmailSystem
 dotnet ef database update
+
+```
 3. Verify Database
 Check that the following tables were created:
 
@@ -150,8 +132,9 @@ EmailHistories
 
 🚀 Running the Application
 Development Mode (Recommended)
-bash
+```bash
 dotnet watch run
+```
 Application will be available at: https://localhost:7000 or http://localhost:5000
 
 Hot reload enabled for development
@@ -159,7 +142,7 @@ Hot reload enabled for development
 Production Mode
 bash
 dotnet run
-💻 Usage
+# 💻 Usage
 Getting Started
 Access the Application: Open your browser and go to https://localhost:7000
 
@@ -211,8 +194,8 @@ Mark as Attended → Changes from "Confirmed" to "Attended"
 
 Cancel → Cancels the appointment
 
-📁 Project Structure
-text
+
+### 📁 Project Structure
 HospitalManagementSystem/
 ├── Controllers/
 │   ├── PatientsController.cs
@@ -239,7 +222,8 @@ HospitalManagementSystem/
 │       └── site.css
 ├── Program.cs
 └── appsettings.json
-🔌 API Endpoints
+
+# 🔌 API Endpoints
 Patients
 GET /Patients - List all patients
 
@@ -285,21 +269,30 @@ GET /Appointments/ByPatient/{id} - List appointments by patient
 
 GET /Appointments/ByDoctor/{id} - List appointments by doctor
 
-🐛 Troubleshooting
+# 🐛 Troubleshooting
 Common Issues
 Database Connection Errors
-bash
+```bash
 # Check MySQL service is running
 sudo systemctl status mysql
 
 # Start MySQL if not running
 sudo systemctl start mysql
+```
 Migration Errors
-bash
+```bash
 # Remove and recreate migrations
 dotnet ef migrations remove
 dotnet ef migrations add InitialCreate
 dotnet ef database update
+```
+
+Email Sending Issues
+1. Verify Gmail credentials in appsettings.json
+
+2. Ensure 2-Step Verification is enabled
+
+3. Use App Password, not regular password
 Email Sending Issues
 Verify Gmail credentials in appsettings.json
 
@@ -310,29 +303,13 @@ Use App Password, not regular password
 Check email history for specific error messages
 
 Build Errors
-bash
+4. Check email history for specific error messages
+
+Build Errors
+```bash
 # Clean and rebuild
 dotnet clean
 dotnet build
-Getting Help
-Check the application logs in the console
+```
 
-Verify all prerequisites are installed
 
-Ensure database is properly configured
-
-Check email configuration if using email features
-
-📄 License
-This project is licensed under the MIT License.
-
-👥 Contributing
-Fork the project
-
-Create a feature branch
-
-Commit your changes
-
-Push to the branch
-
-Open a Pull Request
